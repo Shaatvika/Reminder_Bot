@@ -5,9 +5,10 @@ import sched
 import time
 from twilio.rest import Client
 import threading
+import os
 
-acc_sid = "ACab30051678ec555478046d7120d8309c"
-acc_token = "7fecb5ce482fe679b520fd379859b0e6"
+acc_sid = os.environ.get('Twilio_acc_sid')
+acc_token = os.environ.get('Twilio_acc_token')
 twil_num = "+14155238886"
 
 app = Flask(__name__)
